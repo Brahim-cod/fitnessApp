@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from 'src/auth/auth.guard';
 import { AppComponent } from './app.component';
 import { HomeComponent } from 'src/home/home.component';
+import { DetailComponent } from 'src/class/details/detail.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,18 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'classdetail/:id',
+    component: DetailComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'work',
+    loadChildren: () => import('../workoutPlan/work.module').then((m) => m.WorkoutModule),
+    canActivate: [AuthGuard]
   }
 ];
 

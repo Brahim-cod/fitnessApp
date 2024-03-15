@@ -26,7 +26,7 @@ export class LoginComponent {
 
     const user = await this.authService.login(email, password)
     if(user){
-      this.router.navigate([''])
+      this.router.navigate(['/home'])
     }
   }
 }

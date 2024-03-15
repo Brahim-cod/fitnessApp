@@ -1,17 +1,14 @@
 import { Injectable, inject } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { Auth } from '@angular/fire/auth';
-import { signInWithEmailAndPassword } from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
   private readonly afAuth = inject(AngularFireAuth);
-  private readonly auth = inject(Auth);
 
   login(email: string, password: string) {
-    return signInWithEmailAndPassword(this.auth, email, password);
+    return this.afAuth.signInWithEmailAndPassword(email, password);
   }
 
   signup(email: string, password: string) {
@@ -19,7 +16,7 @@ export class AuthService {
   }
 
   // authentication methods
-  // logout, password reset
+  // logout
   signOut() {
     return this.afAuth.signOut();
   }

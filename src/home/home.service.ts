@@ -1,5 +1,8 @@
-import { Injectable } from "@angular/core";
+import { Injectable, inject } from "@angular/core";
 import { AuthService } from "src/auth/auth.service";
+import { AngularFirestore } from "@angular/fire/compat/firestore";
+import { Class } from "src/model/class";
+import { ClassService } from "src/class/class.service";
 
 @Injectable({
     providedIn: 'root',
@@ -7,15 +10,20 @@ import { AuthService } from "src/auth/auth.service";
 
 export class HomeService {
 
-    constructor(private authService: AuthService) {}
+    constructor(private authService: AuthService, private classService: ClassService) {}
+
+    
 
     signout(): void {
-        this.authService.signOut();
+       this.authService.signOut();
     }
 
     ngOnInit(): void {
-        //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-        //Add 'implements OnInit' to the class.
-        console.log('Test')
+        console.log(this.getClasses());
+        this.getClasses();
+    }
+
+    getClasses() {
+        return this.classService.getAllClasses();
     }
 }

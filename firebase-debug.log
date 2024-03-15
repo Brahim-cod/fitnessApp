@@ -1,0 +1,25 @@
+[debug] [2024-03-15T08:49:11.063Z] ----------------------------------------------------------------------
+[debug] [2024-03-15T08:49:11.066Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\bbiyad\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-03-15T08:49:11.067Z] CLI Version:   13.5.0
+[debug] [2024-03-15T08:49:11.067Z] Platform:      win32
+[debug] [2024-03-15T08:49:11.067Z] Node Version:  v20.11.1
+[debug] [2024-03-15T08:49:11.068Z] Time:          Fri Mar 15 2024 08:49:11 GMT+0000 (UTC)
+[debug] [2024-03-15T08:49:11.068Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-03-15T08:49:11.166Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-15T08:49:11.166Z] > authorizing via signed-in user (brahimbiyad@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\bbiyad\Desktop\Formation\week-2\angular-ts\ANGULAR\getmgaddar
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
