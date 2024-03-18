@@ -4,7 +4,6 @@ import { WorkoutService } from "../work.service";
 import { map } from "rxjs";
 import { Timestamp } from "firebase/firestore";
 import { WorkoutPlan } from "src/model/workoutPlan";
-import { LayoutComponent } from "src/layout/layout.component";
 
 @Component({
     selector: 'app-workview',

@@ -3,6 +3,8 @@ import { WorkViewComponent } from "./view/workview.component";
 import { NgModule } from "@angular/core";
 import { LayoutComponent } from "src/layout/layout.component";
 import { CommonModule } from "@angular/common";
+import { ReactiveFormsModule } from "@angular/forms";
+import { CreateWorkComponent } from "./create/creatework.component";
 
 
 const routes: Routes = [
@@ -10,7 +12,7 @@ const routes: Routes = [
       path: 'view',
       component: WorkViewComponent,
     },
-    //{ path: 'create', component: SignupComponent },
+    { path: 'create', component: CreateWorkComponent },
 ];
 
 
@@ -18,9 +20,10 @@ const routes: Routes = [
 
     declarations: [
         LayoutComponent,
-        WorkViewComponent
+        WorkViewComponent,
+        CreateWorkComponent
     ],
-    imports: [RouterModule.forChild(routes), CommonModule],
+    imports: [RouterModule.forChild(routes), CommonModule, ReactiveFormsModule],
 
     exports: [RouterModule, LayoutComponent],
 }) 
